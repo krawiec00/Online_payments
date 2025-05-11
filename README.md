@@ -1,3 +1,7 @@
+ ## ✍️ Autor
+ Karol Krawczyk
+
+---
 
 ## ✅ Opis
 
