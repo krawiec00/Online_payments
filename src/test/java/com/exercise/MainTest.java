@@ -68,14 +68,12 @@ class MainTest {
 
         Main.applyPayment(order, decision, paymentMap, used);
 
-        // 10% punktami, 90 zł z 10% zniżką -> 81 zł
         assertEquals(new BigDecimal("10.00"), used.get("PUNKTY"));
         assertEquals(new BigDecimal("81.00"), used.get("CARD"));
         assertEquals(new BigDecimal("40.00"), points.limit); // 50 - 10
         assertEquals(new BigDecimal("119.00"), backup.limit); // 200 - 81
     }
 
-    // ======= Dostęp do prywatnych metod przez wrappery (lub refactor klasy do pakietowego zasięgu)
     private BigDecimal invokeApplyDiscount(BigDecimal val, int disc) {
         return Main.applyDiscount(val, disc);
     }
